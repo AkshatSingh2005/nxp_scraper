@@ -2,7 +2,12 @@ import requests
 import pandas as pd
 import time
 
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
 
 url = f"https://api.mouser.com/api/v1/search/keyword?apiKey={API_KEY}"
 headers = {"Content-Type": "application/json"}
